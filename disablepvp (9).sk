@@ -1,0 +1,197 @@
+#Config
+#Don't edit this, this is the configuration of DisablePvP, You can edit, but I would adivse you NOT to. Edit at own risk!
+options:
+	Version: 1.12
+	
+	primarycolor: &b&l
+	
+	
+	secondarycolor: &2&l
+# Don't edit this!
+# This is the core of the skript!!!!
+
+
+command /disablepvphelp:
+	permission: disablepvp.help
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /dph
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l]"
+		message "&2&l-----------------------------------"
+		message "&b&lDisablePvP Help"
+		message "&2&l-----------------------------------"
+		message "&b&l/disablepvphelp"
+		message "&b&l/disablepvp"
+		message "&b&l/disablepvpinthisworldonly"
+		message "&b&l/enablepvp"
+		message "&b&l/enablepvpinthisworldonly"
+		message "&b&l/removeallcreepers"
+		message "&b&l/removeallzombies"
+		message "&b&l/removeallskeletons"
+		message "&b&l/removeallendermen"
+		message "&b&l/removeallcows"
+		message "&b&l/diss"
+		message "&b&l/eiss"
+		message "&b&l/disablepl"
+		message "&b&l/enablepl"
+		message "&b&l/freeze"
+		message "&b&l/unfreeze"
+		message "&b&l/removeallchickens"
+		message "&2&l-----------------------------------"
+		message "&2&l/disablepvphelp shows the help menu."
+		message "&2&l/disablepvp disables pvp in all worlds."
+		message "&2&l/enablepvp enables pvp in all worlds."
+		message "&2&l/disablepvpinthisworldonly disables pvp in the current world you are in."
+		message "&2&l/enablepvpinthisworldonly enables pvp in the current world you are in."
+		message "&2&l/removeallcreepers removes all the creepers in the current world the player is in. This won't work in the console!"
+		message "&2&l/removeallendermen removes all endermen in the current world the player is in. This won't work in the console!"
+		message "&2&l/removeallskeletons removes all skeletons in the current world the player is in. This won't work in the console!"
+		message "&2&l/removeallendermen removes all endermen in the current world the player is in. This won't work in the console!"
+		message "&2&l/removeallcows removes all cows in the current world the player is in. This won't work in the console!"
+		message "&2&l/diss disables sponsor."
+		message "&2&l/eiss enables sponsor."
+		message "&2&l/enablepl enables Disable&4&lPvP&2&l again."
+		message "&2&l/disablepl disables Disable&4&lPvP&2&l."
+		message "&2&l/freeze freezes you."
+		message "&2&l/unfreeze unfreezes you."
+		message "&2&l/removeallchickens removes all chickens in the current world the player is in. This won't work in the console!"
+		
+command /disablepvp:
+	permission: disablepvp.disableall
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /dp
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lDisabled PvP in all worlds!"
+		disable PvP in all worlds
+command /enablepvp:
+	permission: disablepvp.enableall
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /ep
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lEnabled PvP in all worlds!"
+		enable PvP in all worlds
+command /disablepvpinthisworldonly:
+	permission: disablepvp.disablecurrent
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /dpitwo
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lDisabled PvP in the world %world%!"
+		disable PvP #(current world only)
+command /enablepvpinthisworldonly:
+	permission: disablepvp.enablecurrent
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /epitwo
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lEnabled PvP in the world %world%!"
+		enable PvP #(current world only)
+command /all:
+	permission: disablepvp.secretcommand
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /al
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lYou found the secret command!"
+		message "&b&l[Disable&4&lPvP&b&l] &2&lScreen shot this message and you"
+		message "&b&l[Disable&4&lPvP&b&l] &2&lcan be featured on the plugin page!"
+command /removeallcreepers:
+	permission: disablepvp.removecreepers
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /rac
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lRemoved all creepers in the world %world%!"
+		kill all creepers in the player's world
+command /removeallzombies:
+	permission: disablepvp.removezombies
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /raz
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lRemoved all zombies in the world %world%!"
+		kill all zombies in the player's world
+command /removeallskeletons:
+	permission: disablepvp.removeskeletons
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /ras
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lRemoved all skeletons in the world %world%"
+		kill all skeletons in the player's world
+command /removeallendermen:
+	permission: disablepvp.removeendermen
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /rae
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] &2&lRemoved all endermen in the world %world%!"
+		kill all endermen in the player's world
+command /removeallcows:
+	permission: disablepvp.removecows
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /rac2
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] Removed all cows in the world %world%!"
+		kill all cows in the player's world
+command /disablesponsor:
+	permission: disablepvp.disablesponsor
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /diss
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] Disabled sponsor!"
+		delete file "plugins/Skript/scripts/sponsor.sk"
+command /enablesponsor:
+	permission: disablepvp.enablesponsor
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /eiss
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] Enabled sponsor!"
+		download file from "http://download1325.mediafireuserdownload.com/njc4rlo87nzg/gaam4l534ymrk31/sponsor.sk" to file "plugins/Skript/scripts/sponsor.sk"
+command /disablepl:
+	permission: disablepvp.disableplugin
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /dpl
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] Disable&4&lPvP&b&l has successfully been disabled."
+		disable script "plugins/Skript/scripts/disablepvp.sk"
+command /enablepl:
+	permission: disablepvp.enableplugin
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /epl
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] Disable&4&lPvP&b&l has successfully been enabled! Hello again!"
+		enable script "plugins/Skript/scripts/disablepvp.sk"
+command /freeze [<offline player>]:
+    permission: disablepvp.freeze
+    permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+    aliases: /frz
+    trigger:
+        message "&b&l[Disable&4&lPvP&b&l] You are now frozen. Join the TS at: TS HERE! Edit the skript and put the TS ip at this area." to arg-1
+        apply slowness 100 to arg-1 for 1 hour
+        apply jump boost 128 to arg-1 for 1 hour
+		apply weakness 255 to arg-1 for 1 hour
+command /unfreeze [<offline player>}:
+    permission: disablepvp.unfreeze
+    permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+    aliases: /unfrz
+    trigger:
+        message "&b&l[Disable&4&lPvP&b&l] You are now unfrozen."
+        remove slowness from arg-1
+        remove jump boost from arg-1
+		remove weakness from arg-1
+command /removeallchickens:
+	permission: disablepvp.removeallchickens
+	permission message: &b&l[Disable&4&lPvP&b&l] You don't have permission to use this command. Sorry!
+	aliases: /rac3
+	trigger:
+		message "&b&l[Disable&4&lPvP&b&l] Removed all chickens in %world%
+		kill all chickens in the player's world
+on load:
+		wait 50 ticks
+		message "&b&l[Disable&4&lPvP&b&l] Disable&4&lPvP&b&l {@Version} has successfully been loaded!" to console
+on join:
+	wait 25 ticks
+	if player is op:
+		if text from "https://pastebin.com/raw/guxYWJiT" is not {@Version}
+		message "&b&l[Disable&4&lPvP&b&l] &2&lThere is a BRAND NEW Version of &b&lDisable&4&lPvP&b&l!"
+		message "&b&l[Disable&4&lPvP&b&l] &2&lhttps://www.spigotmc.org/resources/disablepvp-skript.47723/"
+		stop
+on unload:
+	message "&b&l[Disable&4&lPvP&b&l] Disabling Disable&4&lPvP&b&l {@Version}" to console
+	wait 200 ticks
+	message "&b&l[Disable&4&lPvP&b&l] Disable&4&lPvP&b&l {@Version} has been disabled! Bye!" to console
+# End of DisablePvP plugin configuration and Core of the plugin!!!!
